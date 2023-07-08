@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "433650570331",
+    "project_id": "nanniesdb-83dfb",
+    "storage_bucket": "nanniesdb-83dfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433650570331:android:baa4b254c56939e2805b7e",
+        "android_client_info": {
+          "package_name": "com.example.contractsdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433650570331-p2mutbqfkq5gv230nvoal0tr4pjdpc6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhKbiffAik_YvBTEGS-GoxERk6tYwTRqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433650570331-p2mutbqfkq5gv230nvoal0tr4pjdpc6v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

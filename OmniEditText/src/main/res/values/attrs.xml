@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OmniEditText">
+        <attr name="decimalPlaces" format="integer" />
+        <attr name="omniMaxValue" format="integer" />
+        <attr name="omniMinValue" format="integer" />
+        <attr name="omniTextColor" format="color" />
+        <attr name="omniHintColor" format="color" />
+        <attr name="omniHintText" format="string" />
+        <attr name="omniEnableClearButton" format="boolean" />
+        <attr name="omniClearButtonIcon" format="reference" />
+
+        <attr name="omniInputType" format="enum">
+            <enum name="amount" value="1"/>
+            <enum name="email" value="2"/>
+            <enum name="password" value="3"/>
+            <enum name="nationalId" value="4"/>
+            <enum name="phoneNumber" value="5"/>
+        </attr>
+    </declare-styleable>
+
+</resources>
