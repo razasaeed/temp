@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+    </queries>
+
     <application
         android:name=".HiltApplication"
         android:allowBackup="true"
@@ -16,6 +23,12 @@
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
 
+        <activity
+            android:name=".ui.healthy_recipes.HealthyRecipesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.weight_gain.WeightGainActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.recipe_detail.RecipeDetailActivity"
             android:exported="false" />
