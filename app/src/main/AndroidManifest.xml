@@ -24,6 +24,9 @@
         android:usesCleartextTraffic="true">
 
         <activity
+            android:name=".ui.add_recipe.AddRecipeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.healthy_recipes.HealthyRecipesActivity"
             android:exported="false" />
         <activity

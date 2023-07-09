@@ -2,6 +2,11 @@ package com.example.contractsdemo.data
 
 object SharedData {
 
+    val baseUrl = "https://nanniescare.000webhostapp.com/nanniesdb/"
+
+    lateinit var customRecipe: NewRecipe
+    var newRecipes: Array<NewRecipe> = emptyArray()
+
     var RECIPE_NAME = ""
     var RECIPE_PIC = ""
 
@@ -10,6 +15,8 @@ object SharedData {
     var THREE = 3;
     var FOUR = 4;
     var OPTION = ONE;
+
+    var isCustomCheck = false
 
     val first = arrayOf(
         "Cheese and mashroom cakes",

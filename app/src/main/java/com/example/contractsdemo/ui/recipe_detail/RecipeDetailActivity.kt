@@ -16,6 +16,8 @@ import com.example.contractsdemo.data.SharedData.THREE
 import com.example.contractsdemo.data.SharedData.TWO
 import com.example.contractsdemo.data.SharedData.first
 import com.example.contractsdemo.data.SharedData.forth
+import com.example.contractsdemo.data.SharedData.isCustomCheck
+import com.example.contractsdemo.data.SharedData.newRecipes
 import com.example.contractsdemo.data.SharedData.second
 import com.example.contractsdemo.data.SharedData.third
 import com.example.contractsdemo.databinding.ActivityRecipeDetailBinding
@@ -44,8 +46,19 @@ class RecipeDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        val recipeName = RECIPE_NAME.lowercase().replace(" ", "-")
-        GetRecipe().execute("https://www.nhs.uk/start-for-life/baby/recipes-and-meal-ideas/${recipeName}")
+        if (isCustomCheck) {
+            SharedData.customRecipe = newRecipes.firstOrNull { it.heading == RECIPE_NAME }!!
+            binding.apply {
+                pb.isVisible = false
+                tvDetail.text = SharedData.customRecipe.detail
+                tvSteps.text = SharedData.customRecipe.steps
+                tvIngredients.text = SharedData.customRecipe.ingredients
+                tvMethods.text = SharedData.customRecipe.methods
+            }
+        } else {
+            val recipeName = RECIPE_NAME.lowercase().replace(" ", "-")
+            GetRecipe().execute("https://www.nhs.uk/start-for-life/baby/recipes-and-meal-ideas/${recipeName}")
+        }
 
         binding.apply {
             toolbar.tvTitle.text = "Recipe Detail"
