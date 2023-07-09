@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.signin.SignInActivity">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="NANNIES CARE"
+            android:textColor="@color/dullblack"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Add Recipe"
+                    android:textColor="@color/dullblack"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Heading"
+                    app:omniTextColor="@color/black" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_image_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Image url"
+                    app:omniTextColor="@color/black" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Detail"
+                    app:omniTextColor="@color/black" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Steps"
+                    app:omniTextColor="@color/black" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Ingredients"
+                    app:omniTextColor="@color/black" />
+
+                <com.omni.input.OmniEditText
+                    android:id="@+id/et_methods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:omniClearButtonIcon="@drawable/ic_clear"
+                    app:omniEnableClearButton="true"
+                    app:omniHintColor="@color/white"
+                    app:omniHintText="Methods"
+                    app:omniTextColor="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/btn_add_recipe"
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/darkgreen"
+                    android:gravity="center"
+                    android:text="Add Recipe"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
